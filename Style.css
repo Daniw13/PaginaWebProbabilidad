@@ -1,0 +1,218 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+h3 {
+    color: #555;
+    margin: 15px 0 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: bold;
+}
+
+textarea, input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.contenedor-estadistica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.estadistica-obj {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.estadistica-obj .valor {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 5px;
+}
+
+.tabla-freq {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: white;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.graficos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.grafico-obj {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.grafico-obj h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.resultados {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border-left: 3px solid #4CAF50;
+}
+
+.resultados div {
+    margin: 8px 0;
+    color: #333;
+}
+
+pre {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+    .graficos {
+        grid-template-columns: 1fr;
+    }
+    
+    .contenedor-estadistica {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 0.5;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: #999;
+}
